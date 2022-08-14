@@ -1,0 +1,14 @@
+.list-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  &--margin {
+    margin-bottom: 24px;
+
+    @media screen and (min-width: 1200px) {
+      margin-bottom: 30px;
+    }  
+  }
+}

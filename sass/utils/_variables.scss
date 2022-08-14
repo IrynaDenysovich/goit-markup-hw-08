@@ -1,0 +1,36 @@
+:root {
+    /* text colors */
+    --color-focus: #2196f3;
+    --color-text-darck: #212121;
+    --color-text-light: #757575;
+    --color-text-white: #ffffff;
+  
+    /* Bg colors */
+    --color-bg-black: #000;
+    --color-bg-darck: #2f303a;
+    --color-bg-light: #f5f4fa;
+    --color-bg-white: #ffffff;
+  
+    /* others */
+    --animation: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    // fonts
+    --primary-font:'Roboto';
+    --secondary-font: 'Raleway';
+  }
+
+
+  $indent: 30px;
+  $about-items: 4;
+  $about-item-mobile: 1;
+  $about-item-tablet: 2;
+  $work-items: 3;
+  $team-items: 4;
+  $team-items-mobile:1;
+  $team-items-tablet:2;
+  $clients-items: 6;
+  $clients-items-mobile: 2;  
+  $clients-items-tablet: 3;  
+  $portfolio-work-items: 3;
+  $portfolio-work-items-mobile: 1;
+  $portfolio-work-items-tablet: 2;

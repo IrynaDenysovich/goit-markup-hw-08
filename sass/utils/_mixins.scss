@@ -1,0 +1,15 @@
+@mixin fonts($size, $height, $weight: 400, $spacing: 0.03em) {
+  font-weight: $weight;
+  font-size: $size;
+  line-height: calc($height / $size);
+  letter-spacing: $spacing;
+}
+
+@mixin flexbasis($items-count, $indent-value: $indent) {
+  flex-basis: calc((100% - $indent-value * ($items-count - 1)) / $items-count);
+}
+
+@mixin padding_up_down($top: 0px, $bottom: 0px) {
+  padding-top: $top;
+  padding-bottom: $bottom;
+}

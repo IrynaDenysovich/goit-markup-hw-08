@@ -1,0 +1,34 @@
+.work {
+display: none;
+
+  @extend %section;
+  padding-top: 0;
+
+  @media screen and (min-width: 1200px) {
+   display: block;
+  }
+}
+
+.work__container {
+  @extend %container;
+}
+
+.work__list {
+  @extend %list-style;
+}
+
+.work__item {
+  position: relative;
+  @include flexbasis($work-items);
+}
+
+.work__title {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 27px;
+  font-weight: 700;
+  text-align: center;
+  color: #ffffff;
+  background-color: rgba(47, 48, 58, 0.8);
+}

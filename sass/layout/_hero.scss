@@ -1,0 +1,41 @@
+.hero {
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url(../images/bg-main-section.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  @include padding_up_down(118px, 118px);
+  
+
+  @media screen and (min-width: 1200px) {
+   @include padding_up_down(200px, 200px);
+  }
+  
+}
+
+.hero__container {
+  @extend %container;
+  text-align: center;
+}
+
+.hero__title {
+  margin-left: auto;
+  margin-right: auto;
+
+  
+  width: 360px;
+  margin-bottom: 30px;
+
+  @include fonts(26px, 42px, 900, 0.06em);
+
+  text-transform: uppercase;
+  color: var(--color-text-white);
+
+  @media screen and (min-width: 1200px) {
+    width: 696px;
+    @include fonts(44px, 60px, 900, 0.06em);
+  }
+}
+
+.hero__btn {
+  padding: 10px 32px;
+}

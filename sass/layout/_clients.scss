@@ -1,0 +1,48 @@
+.clients {
+  @extend %section;
+}
+
+.clients__container {
+  @extend %container;
+}
+
+.clients__list {
+  @extend %list-style;
+  align-content: center;
+  justify-content: center;
+}
+
+.clients__item {
+  @include flexbasis($clients-items-mobile);
+
+  
+  @media screen and (min-width: 768px) {
+    @include flexbasis($clients-items-tablet);
+  }
+
+  @media screen and (min-width: 1200px) {
+    @include flexbasis($clients-items);
+  }
+}
+
+.clients__link {
+  height: 92px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+
+  color: #afb1b8;
+  border: 1px solid currentColor;
+  border-radius: 4px;
+  width: 100%;
+  transition: color var(--animation);
+
+  &:hover,
+  &:focus {
+    color: var(--color-focus);
+  }
+}
+
+.clients__icon {
+  fill: currentColor;
+}

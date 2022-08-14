@@ -1,0 +1,34 @@
+%section {
+
+  @include padding_up_down(60px, 60px);
+
+  @media screen and (min-width: 1200px) {
+    @include padding_up_down(94px, 94px);
+  }
+}
+
+%container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-right: auto;
+  margin-left: auto;
+
+  @media screen and (min-width: 480px) {
+    width: 480px;
+  }
+
+  @media screen and (min-width: 768px) {
+    width: 768px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 1200px;
+  }
+}
+
+%list-style {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $indent;
+
+}

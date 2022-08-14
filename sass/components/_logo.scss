@@ -1,0 +1,29 @@
+.logo {
+  
+  text-decoration: none;
+  
+  font-family: var(--secondary-font);
+  @include fonts(26px, 31px, 700);
+
+  color: var(--color-bg-black);
+
+
+ 
+  @media screen and (min-width: 768px) {
+    margin-right: 88px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-right: 93px;
+  }
+  &--white-margin {
+    display: block;
+    padding-bottom: 20px;
+    color: var(--color-text-white);
+    margin-right: 0;
+  }
+}
+
+.logo__item {
+  color: var(--color-focus);
+}
