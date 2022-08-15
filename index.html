@@ -26,7 +26,7 @@
     <header class="header">
       <div class="header__container">
         <a href="./index.html" class="logo"><span class="logo__item"> Web</span>Studio </a>
-        <button type="button" class="header__menu-button">
+        <button type="button" class="header__menu-button" data-menu-open>
           <svg width="40" height="40" aria-label="мобильное меню">
             <use class="header__menu-icon" href="./images/icons.svg#icon-menu"></use>
           </svg>
@@ -42,7 +42,7 @@
             <li class="nav__item"><a href="./contacts.html" class="nav__link link">Контакты</a></li>
           </ul>
         </nav>
-        <div class="contacts contacts--none">
+        <div class="contacts contacts--header">
           <a
             href="mailto:info@devstudio.com"
             class="contacts__link link contacts__link--margin"
@@ -128,15 +128,39 @@
           <h2 class="section-title section-title--margin">Чем мы занимаемся</h2>
           <ul class="work__list">
             <li class="work__item">
-              <img src="./images/work-comtuter.jpg" alt="Работа за компьютером" width="370" />
+              <picture>
+                <!-- desctop screen -->
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="./images/work/work01_lg@1x.jpg 1x, ./images/team/work01_lg@2x.jpg 2x"
+                  type="image/jpg" />
+                <!-- fallback -->
+                <img src="./images/team/work01_lg@1x.jpg" alt="Работа за компьютером" class="team__img" />
+              </picture>
               <p class="title work__title">Десктопные приложения</p>
             </li>
             <li class="work__item">
-              <img src="./images/work-mobile.jpg" alt="Работа с телефоном" width="370" />
+              <picture>
+                <!-- desctop screen -->
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="./images/work/work02_lg@1x.jpg 1x, ./images/team/work02_lg@2x.jpg 2x"
+                  type="image/jpg" />
+                <!-- fallback -->
+                <img src="./images/team/work02_lg@1x.jpg" alt="Работа с телефоном" class="team__img" />
+              </picture>
               <p class="title work__title">Мобильные приложения</p>
             </li>
             <li class="work__item">
-              <img src="./images/work-tochpad.jpg" alt="Работа на планшете" width="370" />
+              <picture>
+                <!-- desctop screen -->
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="./images/work/work03_lg@1x.jpg 1x, ./images/team/work03_lg@2x.jpg 2x"
+                  type="image/jpg" />
+                <!-- fallback -->
+                <img src="./images/team/work03_lg@1x.jpg" alt="Работа на планшете" class="team__img" />
+              </picture>              
               <p class="title work__title">Дизайнерские решения</p>
             </li>
           </ul>
@@ -148,11 +172,26 @@
           <h2 class="section-title section-title--margin">Наша команда</h2>
           <ul class="team__list">
             <li class="team__item">
-              <img
-                src="./images/man-smiling-glasses.jpg"
-                alt="Игорь Демьяненко"
-                width="270"
-                class="team__img" />
+              <picture>
+                <!-- desctop screen -->
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="./images/team/team01_lg@1x.jpg 1x, ./images/team/team01_lg@2x.jpg 2x"
+                  type="image/jpg" />
+                <!-- tablet screen -->
+                <source
+                  media="(min-width: 768px)"
+                  srcset="./images/team/team01_md@1x.jpg 1x, ./images/team/team01_md@2x.jpg 2x"
+                  type="image/jpg" />
+                <!-- mobile screen -->
+                <source
+                  media="(max-width: 767px)"
+                  srcset="./images/team/team01_sm@1x.jpg 1x, ./images/team/team01_sm@2x.jpg 2x"
+                  type="image/jpg" />
+                <!-- fallback -->
+                <img src="./images/team/team01_sm@1x.jpg" alt="Игорь Демьяненко" class="team__img" />
+              </picture>
+
               <div class="team__wrapper">
                 <h3 class="team__name">Игорь Демьяненко</h3>
                 <p lang="en" class="team__profession">Product Designer</p>
@@ -209,11 +248,30 @@
               </ul>
             </li>
             <li class="team__item">
-              <img
-                src="./images/smiling-woman.jpg"
-                alt="Ольга Репина"
-                width="270"
-                class="team__img" />
+              <picture>
+                <!-- desctop screen -->
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="./images/team/team02_lg@1x.jpg 1x, ./images/team/team02_lg@2x.jpg 2x"
+                  type="image/jpg" />
+                <!-- tablet screen -->
+                <source
+                  media="(min-width: 768px)"
+                  srcset="./images/team/team02_md@1x.jpg 1x, ./images/team/team02_md@2x.jpg 2x"
+                  type="image/jpg" />
+                <!-- mobile screen -->
+                <source
+                  media="(max-width: 767px)"
+                  srcset="./images/team/team02_sm@1x.jpg 1x, ./images/team/team02_sm@2x.jpg 2x"
+                  type="image/jpg" />
+                <!-- fallback -->
+                <img
+                  src="./images/team/team02_sm@1x.jpg"
+                  alt="Ольга Репина"
+                  width=""
+                  class="team__img" />
+              </picture>
+
               <div class="team__wrapper">
                 <h3 class="team__name">Ольга Репина</h3>
                 <p lang="en" class="team__profession">Frontend Developer</p>
@@ -270,11 +328,30 @@
               </ul>
             </li>
             <li class="team__item">
-              <img
-                src="./images/smiling-man.jpg"
-                alt="Николай Тарасов"
-                width="270"
-                class="team__img" />
+              <picture>
+                <!-- desctop screen -->
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="./images/team/team03_lg@1x.jpg 1x, ./images/team/team03_lg@2x.jpg 2x"
+                  type="image/jpg" />
+                <!-- tablet screen -->
+                <source
+                  media="(min-width: 768px)"
+                  srcset="./images/team/team03_md@1x.jpg 1x, ./images/team/team03_md@2x.jpg 2x"
+                  type="image/jpg" />
+                <!-- mobile screen -->
+                <source
+                  media="(max-width: 767px)"
+                  srcset="./images/team/team03_sm@1x.jpg 1x, ./images/team/team03_sm@2x.jpg 2x"
+                  type="image/jpg" />
+                <!-- fallback -->
+                <img
+                  src="./images/team/team03_sm@1x.jpg"
+                  alt="Николай Тарасов"
+                  width=""
+                  class="team__img" />
+              </picture>
+
               <div class="team__wrapper">
                 <h3 class="team__name">Николай Тарасов</h3>
                 <p lang="en" class="team__profession">Marketing</p>
@@ -331,11 +408,31 @@
               </ul>
             </li>
             <li class="team__item">
-              <img
-                src="./images/man-smiling-beard.jpg"
-                alt="Михаил Ермаков"
-                width="270"
-                class="team__img" />
+              <picture>
+                <!-- desctop screen -->
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="./images/team/team04_lg@1x.jpg 1x, ./images/team/team04_lg@2x.jpg 2x"
+                  type="image/jpg" />
+                <!-- tablet screen -->
+                <source
+                  media="(min-width: 768px)"
+                  srcset="./images/team/team04_md@1x.jpg 1x, ./images/team/team04_md@2x.jpg 2x"
+                  type="image/jpg" />
+                <!-- mobile screen -->
+                <source
+                  media="(max-width: 767px)"
+                  srcset="./images/team/team04_sm@1x.jpg 1x, ./images/team/team04_sm@2x.jpg 2x"
+                  type="image/jpg" />
+
+                <!-- fallback -->
+                <img
+                  src="./images/team/team04_sm@1x.jpg"
+                  alt="Михаил Ермаков"
+                  width=""
+                  class="team__img" />
+              </picture>
+
               <div class="team__wrapper">
                 <h3 class="team__name">Михаил Ермаков</h3>
                 <p lang="en" class="team__profession">UI Designer</p>
@@ -482,7 +579,7 @@
           <a href="./index.html" class="logo logo--white-margin">
             <span class="logo__item"> Web</span>Studio
           </a>
-          <address class="contacts contacts--flex">
+          <address class="contacts contacts--footer">
             <a
               href="https://www.google.com/maps/place/%D0%B1%D1%83%D0%BB.+%D0%9B%D0%B5%D1%81%D0%B8+%D0%A3%D0%BA%D1%80%D0%B0%D0%B8%D0%BD%D0%BA%D0%B8,+26,+%D0%9A%D0%B8%D0%B5%D0%B2,+02000/@50.4265807,30.5383858,17z/data=!3m1!4b1!4m5!3m4!1s0x40d4cf0e033ecbe9:0x57a4dffefec77da0!8m2!3d50.4265807!4d30.5383858"
               target="_blank"
@@ -634,8 +731,8 @@
       </div>
     </div>
     <!-- Modal menu -->
-    <div class="modal-menu">
-      <button type="button" class="modal-menu__button">
+    <div class="modal-menu" data-menu>
+      <button type="button" class="modal-menu__button" data-menu-close>
         <svg width="40" height="40" aria-label="мобильное меню">
           <use class="modal-menu__icon" href="./images/icons.svg#icon-close"></use>
         </svg>
@@ -643,7 +740,9 @@
       <nav class="modal-menu__nav">
         <ul class="modal-menu__list">
           <li class="modal-menu__item">
-            <a href="./index.html" class="modal-menu__link link modal-menu__link--active">Студия</a>
+            <a href="./index.html" class="modal-menu__link link modal-menu__link--active"
+              >Студия</a
+            >
           </li>
           <li class="modal-menu__item">
             <a href="./portfolio.html" class="modal-menu__link link">Портфолио</a>
@@ -714,6 +813,7 @@
         </ul>
       </div>
     </div>
+    <script src="./js/menu.js"></script>
     <script src="./js/modal.js"></script>
   </body>
 </html>

@@ -1,8 +1,7 @@
 .title {
   font-size: inherit;
-  line-height: calc(16 / 14);
+  @include fonts(14px, 16px, 700);
   text-transform: uppercase;
-  letter-spacing: 0.03em;
 
   &--mode-light {
     margin-bottom: 20px;
@@ -12,17 +11,18 @@
   &--margin {
     margin-bottom: 10px;
   }
+
   @media screen and (min-width: 480px) {
     text-align: center;
   }
+
   @media screen and (min-width: 768px) {
     text-align: left;
   }
 
-  &--text-center{
-    @media screen and (min-width: 768px) and (max-width:1199px) {
+  &--text-center {
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
       text-align: center;
     }
   }
-
 }

@@ -15,7 +15,6 @@
 .clients__item {
   @include flexbasis($clients-items-mobile);
 
-  
   @media screen and (min-width: 768px) {
     @include flexbasis($clients-items-tablet);
   }
@@ -38,7 +37,8 @@
   transition: color var(--animation);
 
   &:hover,
-  &:focus {
+  &:focus,
+  &:active {
     color: var(--color-focus);
   }
 }

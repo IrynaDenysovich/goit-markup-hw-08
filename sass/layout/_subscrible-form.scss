@@ -19,7 +19,7 @@
   outline: none;
   margin-bottom: 20px;
 
-  @media screen and (min-width: 768px) and (max-width: 1199px) {
+  @media screen and (min-width: 768px) {
     width: 450px;
     margin-left: auto;
     margin-right: auto;
@@ -27,6 +27,7 @@
 
   @media screen and (min-width: 1200px) {
     margin-bottom: 0;
+    width: auto;
   }
 
   &--size {

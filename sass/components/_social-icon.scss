@@ -14,7 +14,8 @@
   }
 
   &:hover,
-  &:focus {
+  &:focus,
+  &:active {
     color: var(--color-bg-white);
     background-color: var(--color-focus);
   }

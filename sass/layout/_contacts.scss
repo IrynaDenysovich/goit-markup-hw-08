@@ -1,24 +1,22 @@
 .contacts {
-  display: flex;
+  display: none;
+  flex-direction: column;
 
-  &--none {
-    display: none;
-
-    @media screen and (min-width: 768px) {
-      display: flex;
-    }
-  }
-
-  
-  @media screen and (min-width: 768px) and (max-width: 1199px) {
+  @media screen and (min-width: 768px) {
     display: flex;
-    flex-direction: column;
     gap: 10px;
   }
 
-  &--flex {
-    flex-direction: column;
-    gap: 0;
+  @media screen and (min-width: 1200px) {
+    flex-direction: row;
+  }
+
+  &--footer {
+    display: flex;
+    gap: 8px;
+    @media screen and (min-width: 1200px) {
+      flex-direction: column;
+    }
   }
 }
 
@@ -27,21 +25,15 @@
   display: flex;
   align-items: center;
 
-  /* mods */
   &--margin {
-    margin-right: 50px;
-
-    @media screen and (min-width: 768px) and (max-width: 1199px) {
-      margin-right: 0;
+    @media screen and (min-width: 1200px) {
+      margin-right: 50px;
     }
   }
 
- 
-
-  /* events */
-
   &:hover,
-  &:focus {
+  &:focus,
+  &:active {
     .contacts__icon {
       fill: var(--color-focus);
     }
@@ -53,16 +45,15 @@
 
   &--footer-style {
     display: block;
-
     @include fonts(14px, 24px);
-    
+
     color: rgba(255, 255, 255, 0.6);
-    margin-bottom: 9px;
 
     &:last-child {
       margin-bottom: 0px;
     }
-  } 
+  }
+
   &--white {
     color: var(--color-text-white);
   }
@@ -73,6 +64,7 @@
   transition: fill var(--animation);
   margin-right: 10px;
 
+  /* only tablet */
   @media screen and (min-width: 768px) and (max-width: 1199px) {
     width: 14px;
     height: 10px;

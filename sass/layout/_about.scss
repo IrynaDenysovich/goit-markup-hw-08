@@ -11,15 +11,12 @@
 }
 
 .about__item {
- 
-  @media screen and (min-width: 480px) {
-    @include flexbasis($about-item-mobile);
-  }
+  @include flexbasis($about-item-mobile);
 
   @media screen and (min-width: 768px) {
     @include flexbasis($about-item-tablet);
   }
-  
+
   @media screen and (min-width: 1200px) {
     @include flexbasis($about-items);
   }

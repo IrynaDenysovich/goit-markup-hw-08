@@ -1,84 +1,101 @@
-.modal-menu{
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 100;
-  
-    padding: 48px 40px;
-    width: 100%;
-    height: 100%;
-    background-color: var(--color-bg-white);
+.modal-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+
+  padding: 48px 40px;
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-bg-white);
+
+  pointer-events: none;
+  transform: translateX(100%);
+  transition: transform var(--animation);
+
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+
+  &--is-open {
+    pointer-events: initial;
+    transform: translateX(0);
+  }
 }
 
+.modal-menu__button {
+  position: absolute;
+  top: 10px;
+  right: 15px;
 
+  display: inline-flex;
+  text-align: center;
 
-.modal-menu__button{
-    position: absolute;
-    top: 10px;
-    right: 15px;
-  
-    display: inline-flex;
-    text-align: center;
-    
-    
-    background-color: transparent;
+  background-color: transparent;
+  border: none;
+
+  transition: color var(--animation);
+  cursor: pointer;
+
+  &:active {
+    color: var(--color-focus);
+  }
+}
+
+.modal-menu__icon {
+  fill: currentColor;
+}
+
+.modal-menu__list {
+  @extend %list-style;
+
+  margin-bottom: 302px;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.modal-menu__link {
+  @include fonts(40px, 47px, 500, 0.02em);
+  color: var(--color-text-darck);
+
+  &--active {
+    color: var(--color-focus);
+  }
+}
+
+.modal-menu__contacts {
+  flex-direction: column-reverse;
+  gap: 32px;
+  margin-bottom: 64px;
+  display: flex;
+}
+
+.modal-menu__phone {
+  @include fonts(34px, 40px, 500, 0.02em);
+  color: var(--color-focus);
+}
+
+.modal-menu__email {
+  @include fonts(24px, 28px, 500, 0.02em);
+  color: var(--color-text-light);
+}
+
+.modal-menu__social-list {
+  @extend %list-style;
+  gap: 10px;
+}
+
+.modal-menu__social-item {
+  border-right: 1px solid rgba(33, 33, 33, 0.2);
+
+  &:last-child {
     border: none;
-    
-    cursor: pointer;
+  }
 }
 
-.modal-menu__list{
-    @extend %list-style;
+.modal-menu__social-link {
+  @include fonts(18px, 22px, 500, 0.02em);
 
-    margin-bottom: 302px;
-    flex-direction: column;
-    gap: 32px;
-
-}
-
-.modal-menu__link{
-    @include fonts (40px, 47px, 500, 0.02em);
-    color: var(--color-text-darck);
-
-    &--active{
-        color: var(--color-focus);
-    }
-}
-
-.modal-menu__contacts{
-    flex-direction: column-reverse;
-    gap: 32px;
-    margin-bottom: 64px;
-}
-.modal-menu__phone{
-    @include fonts (34px, 40px, 500, 0.02em);
-    color: var(--color-focus);
-
-}
-
-.modal-menu__email{
-    @include fonts (24px, 28px, 500, 0.02em);
-    color: var(--color-text-light);
-}
-
-.modal-menu__social-list{
-    @extend %list-style;
-    gap: 10px;
-   
-
-}
-.modal-menu__social-item{
-    border-right: 1px solid rgba(33, 33, 33, 0.2);
-
-    &:last-child{
-     border: none;
-    } 
-}
-
-.modal-menu__social-link{
-    @include fonts (18px, 22px, 500, 0.02em);
-
-    padding-right: 10px;
-    color: var(--color-focus);
-    
+  padding-right: 10px;
+  color: var(--color-focus);
 }

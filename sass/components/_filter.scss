@@ -1,5 +1,6 @@
 .filter {
   @extend %list-style;
+
   justify-content: flex-start;
   gap: 8px;
   margin-bottom: 40px;
@@ -16,7 +17,9 @@
 .filter__btn {
   padding: 6px 22px;
   font-family: inherit;
+
   @include fonts(16px, 26px, 500);
+
   background-color: var(--color-bg-light);
   border-radius: 4px;
   border: none;
@@ -24,7 +27,8 @@
   transition: background-color var(--animation), color var(--animation), box-shadow var(--animation);
 
   &:hover,
-  &:focus {
+  &:focus,
+  &:active {
     background-color: var(--color-focus);
     color: var(--color-text-white);
     box-shadow: 0px 3px 1px rgb(0 0 0 / 10%), 0px 1px 2px rgb(0 0 0 / 8%),
