@@ -26,20 +26,25 @@
 }
 
 .hero__title {
-  margin-left: auto;
-  margin-right: auto;
-
-  width: 360px;
   margin-bottom: 30px;
-
   @include fonts(26px, 42px, 900, 0.06em);
 
   text-transform: uppercase;
   color: var(--color-text-white);
 
+  width: 360px;
+  margin-left: calc(50% - 360px / 2);
+  transform: scale(0.8);
+  transition: transform var(--animation);
+
+  @media screen and (min-width: 768px) {
+    transform: scale(1);
+  }
+
   @media screen and (min-width: 1200px) {
     width: 696px;
     @include fonts(44px, 60px, 900, 0.06em);
+    margin-left: calc(50% - 696px / 2);
   }
 }
 

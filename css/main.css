@@ -758,9 +758,6 @@ img {
 }
 
 .hero__title {
-  margin-left: auto;
-  margin-right: auto;
-  width: 360px;
   margin-bottom: 30px;
   font-weight: 900;
   font-size: 26px;
@@ -768,6 +765,20 @@ img {
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--color-text-white);
+  width: 360px;
+  margin-left: calc(50% - 180px);
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
+  -webkit-transition: -webkit-transform var(--animation);
+  transition: -webkit-transform var(--animation);
+  transition: transform var(--animation);
+  transition: transform var(--animation), -webkit-transform var(--animation);
+}
+@media screen and (min-width: 768px) {
+  .hero__title {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
 }
 @media screen and (min-width: 1200px) {
   .hero__title {
@@ -776,6 +787,7 @@ img {
     font-size: 44px;
     line-height: 1.3636363636;
     letter-spacing: 0.06em;
+    margin-left: calc(50% - 348px);
   }
 }
 
