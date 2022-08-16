@@ -11,6 +11,7 @@
       url(../images/hero/hero_lg@1x.jpg);
   }
 
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   @include padding_up_down(118px, 118px);

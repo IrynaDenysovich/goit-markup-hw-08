@@ -11,8 +11,7 @@
 }
 
 .portfolio__item {
-  overflow: hidden;
-  @include flexbasis($portfolio-work-items-mobile);
+   @include flexbasis($portfolio-work-items-mobile);
 
   @media screen and (min-width: 768px) {
     @include flexbasis($portfolio-work-items-tablet);
